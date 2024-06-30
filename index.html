@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Penerapan Artificial Neural Networks Menggunakan Dataset Deep Learning</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="w-full flex flex-col justify-center items-center bg-[#EFF5FD]">
+        <header class="w-10/12 bg-[#7BC7FF] p-5 mt-2 mb-2 rounded-lg">
+            <div class="mb-2">
+                <h1 class="text-center text-white text-4xl font-bold mb-5">Penerapan Artificial Neural Networks Menggunakan Dataset Deep Learning</h1>
+                <h3 class="text-white text-4xl font-bold">Tugas Kelompok:</h3>
+            </div>
+            <div>
+                <ol class="list-inside list-decimal text-white text-lg">
+                    <li>
+                        Bimo Sandya Prima Sakti ->
+                        <span class="font-bold">1462100244</span>
+                    </li>
+                    <li>
+                        Bimo Sandya Prima Sakti ->
+                        <span class="font-bold">1462100244</span>
+                    </li>
+                    <li>
+                        Bimo Sandya Prima Sakti ->
+                        <span class="font-bold">1462100244</span>
+                    </li>
+                </ol>
+            </div>
+        </header>
+        <div class=" w-10/12 bg-[#CDE7FF] p-3 mt-2 rounded-lg mb-4">
+            <h5 class="text-2xl font-normal">Silahkan Masukan Data Nasabah Bank:</h5>
+            <form action="/submit" method="post" class="mt-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="CreditScore">
+                        Masukan Credit Score
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="CreditScore"
+                        type="number"
+                        name="CreditScore"
+                        placeholder="Credit Score"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Geography_Germany">
+                        Masukan Asal Geografis Pelanggan
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="Geography_Germany"
+                        type="number"
+                        name="Geography_Germany"
+                        placeholder="Geografis Pelanggan"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Geography_Spain">
+                        Masukan Asal Geografis Pelanggan
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="Geography_Spain"
+                        type="number"
+                        name="Geography_Spain"
+                        placeholder="Geografis Pelanggan"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Gender_Male">
+                        Masukan Jenis Kelamin
+                    </label>
+                    <select class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white" id="Gender_Male" name="Gender_Male">
+                        <option selected>Gender</option>
+                        <option value="1">Laki-Laki</option>
+                        <option value="0">Perempuan</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Age">
+                        Masukan Usia
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="Age"
+                        type="number"
+                        name="Age"
+                        placeholder="Usia"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Tenure">
+                        Masukan Berapa Lama langan Bank Dalam Tahun
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="Tenure"
+                        type="number"
+                        name="Tenure"
+                        placeholder="Berapa Tahun"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="Balance">
+                        Masukan Saldo Rekening Pelanggan
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="Balance"
+                        type="number"
+                        name="Balance"
+                        placeholder="Saldo Rekening Pelanggan"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="NumOfProducts">
+                        Masukan Jumlah Produk Bank yang dimiliki oleh pelanggan
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="NumOfProducts"
+                        type="number"
+                        name="NumOfProducts"
+                        placeholder="Jumlah Produk Bank"
+                    >
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="HasCrCard">
+                        Apakah pelanggan memiliki kartu kredit
+                    </label>
+                    <select class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white" id="HasCrCard" name="HasCrCard">
+                        <option value="1">Ya</option>
+                        <option value="0">Tidak</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="IsActiveMember">
+                        Apakah adalah anggota aktif bank
+                    </label>
+                    <select class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white" id="IsActiveMember" name="IsActiveMember">
+                        <option value="1">Ya</option>
+                        <option value="0">Tidak</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="EstimatedSalary">
+                        Masukan gaji tahunan pelanggan
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="EstimatedSalary"
+                        type="number"
+                        name="EstimatedSalary"
+                        placeholder="Masukan Gaji"
+                    >
+                </div>
+                <button class="bg-[#3190E9] rounded-lg w-40 p-2 text-lg font-bold text-white" type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
